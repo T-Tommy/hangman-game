@@ -6,6 +6,9 @@ const randomNumber = getRandomIntInclusive(0, wordList.length);
 const randomWord = wordList[randomNumber];
 const wordLength = randomWord.length;
 
+let counter = 0;
+let secondCounter = 0;
+
 for(let i = 0; i < alphabet.length; i++) {
     let guessLetter = alphabet[i];
     const letterButton = document.createElement('button');
@@ -17,16 +20,20 @@ for(let i = 0; i < alphabet.length; i++) {
         letterButton.classList.add('clicked');
         
         console.log(randomWord);
-        console.log(randomWord.length);
-        
         
         for(let i = 0; i < wordLength; i++) {
             let wordLetter = randomWord[i];
             if(guessLetter === wordLetter) {
+                counter++;
                 const test = document.querySelectorAll('.underline');
                 test[i].textContent = guessLetter;
-            } else {
-                console.log('hi');
+            } 
+            
+            else if(wordLength - 1 === i) {
+                console.log(i);
+                secondCounter++;
+                let picture = document.getElementById('picture');
+                picture.src = 'assets/hangman' + counter + '.png';
             }
         }
     }, { once : true });
@@ -40,6 +47,9 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max));
 }
 
+function draw() {
+
+}
 
 const phrase = document.getElementById('phrase');
 
