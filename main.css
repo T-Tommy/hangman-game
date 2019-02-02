@@ -1,0 +1,28 @@
+#hangman-art {
+    height: 250px;
+    width: 300px;
+    background-color: salmon;
+}
+
+#phrase {
+    height: 50px;
+    width: 300px;
+    background-color: lightcyan;
+}
+
+#buttons {
+    height: 50px;
+    width: 300px;
+    background-color: blue;
+    border: 0;
+}
+
+
+.button-class {
+    background-color: yellow;
+}
+
+.clicked {
+    background-color: blue;
+    color: blue;
+}
