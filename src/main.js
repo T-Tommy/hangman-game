@@ -8,6 +8,8 @@ const wordLength = randomWord.length;
 
 let counter = 0;
 let secondCounter = 0;
+let picture = document.getElementById('picture');
+
 
 for(let i = 0; i < alphabet.length; i++) {
     let guessLetter = alphabet[i];
@@ -27,13 +29,12 @@ for(let i = 0; i < alphabet.length; i++) {
                 counter++;
                 const test = document.querySelectorAll('.underline');
                 test[i].textContent = guessLetter;
-            } 
-            
-            else if(wordLength - 1 === i) {
+            } else if(wordLength - 1 === i, counter <= 4) {
                 console.log(i);
                 secondCounter++;
-                let picture = document.getElementById('picture');
                 picture.src = 'assets/hangman' + counter + '.png';
+            } else if(secondCounter > 4) {
+                picture.src = 'assets/hangman4.png';
             }
         }
     }, { once : true });
