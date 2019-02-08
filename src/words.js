@@ -1,9 +1,10 @@
 const wordList = [
-    'fish',
-    'water',
-    'boat',
-    'bridge',
-    'microwave'
+    'fishh',
+    'wateer',
+    'boato',
+    'bridger',
+    'macrowave',
+    'color'
 ];
 
 export default wordList;
